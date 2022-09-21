@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+body {background-image: url(./imagens/Fundo.jpg);
+background-position: top center;
+background-size: 100% auto;
+background-repeat: no-repeat;
+background-color: #121214; 
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+header {
+  margin-top: 32px;
+  text-align: center;
+}
+
+header div {
+  width: 120px;
+  margin: auto;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%) ;
+
+  border-radius: 50%;
+
+  display: flex;
+  padding: 4px;
+
+  transition: transform .3s;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header div img{ 
+   width: 120px;
+   border-radius: 50%;
+   }
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 32px auto;
+
+  display: grid;
+  gap: 24px;
+
+  margin-top: 32px;
+}
+
+section {
+  color: white;
+
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+section div {
+  background-color: #2a2634;       /* cor da caixa*/
+  padding: 32px;      /* espaço superior entre caixa e foto*/
+  padding-top: 24px; /* espaço superior entre caixa e letra */
+  border-radius: 8px; 
+  /* boder-top:4px solid red --- exemplo de borda sem gradiente*/
+
+}
+
+section h2 {
+letter-spacing: -0.47px;  /* espaço entre letras */
+}
+
+section p {
+  letter-spacing: -0.18px; /* espaço entre letras */
+color: #A1A1AA; /* cor da letra */
+}
+
+section ul{
+  display: flex;  /* caixa */
+  flex-wrap: wrap;  /* para ajudar ao tamnaho da caixa as caixas secundarias */
+  gap: 16px; /* espaçamento entre as imagem */
+
+  margin-top: 24px; /* margem de cima*/
+}
+
+section ul li {
+  transition: transform .3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+.games-list img {
+    width: 90px;          /* tamanho da imagem */
+    border-radius: 8px; /* arredondamento da imagem */
+}
+
+.canais-list img {
+  width: 70px;         /* tamanho da imagem */
+  border-radius: 50%; /* arredondamento da imagem */
+}
+
+/* animation*/
+
+header div{
+  animation: fromTop .7 .2 backwards;
+}
+
+main section{
+  animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1){
+  animation-name: 0 ;
+}
+
+main section:nth-child(2){
+  animation-name: .3s ;
+}
+
+main section:nth-child(3){
+  animation-name: .6s ;
+}
+
+
+@keyframes fromTop {
+  from { 
+    opacity: 0;
+    transform: translateY(-30px);
+   }
+
+  to{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fromBottom{
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+   }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
